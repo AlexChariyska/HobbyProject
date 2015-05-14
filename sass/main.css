@@ -1,0 +1,135 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/KaushanScript-Regular.ttf); }
+body {
+  background: url("../img/header_background.png") no-repeat;
+  padding-top: 70px;
+  font-family: myFirstFont;
+  font-size: 16px; }
+
+a:hover {
+  text-decoration: none; }
+
+.recipes-wrapper {
+  overflow: hidden;
+  font-size: 18px;
+  min-height: 700px; }
+
+.recipe_date {
+  display: block; }
+
+.recipe_img {
+  width: 100%;
+  border-radius: 5px; }
+
+.recipe_img-max {
+  max-width: 400px; }
+
+.recipe_more-info {
+  display: block; }
+
+.aside-wrapper {
+  overflow: hidden;
+  margin: 0 auto; }
+  .aside-wrapper .aside-wrapper_img {
+    background: url("http://localmilkblog.com/wp-content/uploads/2013/07/sidebar_logo.png") no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 100%;
+    height: 340px; }
+  .aside-wrapper .search-field {
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px; }
+  .aside-wrapper .search-field:active {
+    outline: none; }
+  .aside-wrapper .search-btn {
+    background: url("../img/search.png") no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 80%; }
+  .aside-wrapper .social-icons__fb {
+    background: url("../img/facebook.png") no-repeat;
+    width: 48px;
+    height: 48px;
+    display: block; }
+  .aside-wrapper .social-icons__tw {
+    background: url("../img/footer_social_twitter.png") no-repeat;
+    width: 48px;
+    height: 48px; }
+  .aside-wrapper .social-icons__ins {
+    background: url("../img/instagram.png") no-repeat;
+    width: 48px;
+    height: 48px; }
+  .aside-wrapper .social-icons__plus {
+    background: url("../img/bloglovin.png") no-repeat;
+    width: 48px;
+    height: 48px; }
+
+.recipe_gallery {
+  list-style: none; }
+  .recipe_gallery img {
+    margin: 10px; }
+
+.contact-wrapper label, .contact-wrapper input {
+  font-size: 18px;
+  display: block;
+  width: 100%; }
+.contact-wrapper textarea {
+  width: 100%; }
+
+.recipe_more-info {
+  background: url("../img/read-more.png") no-repeat;
+  display: block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px; }
+
+.recipe_more-info:hover {
+  text-decoration: none; }
+
+.recipe_title {
+  background: url("../img/flower.png") no-repeat;
+  line-height: 1.5;
+  padding: 0 0 0 50px;
+  font-size: 26px; }
+
+.recipe_ingredients {
+  list-style-image: url("../img/tick.png"); }
+
+.source_icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px; }
+
+.sentence {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin: 10px;
+  width: 50%; }
+
+.submit-btn {
+  background: transparent;
+  border: none;
+  border-radius: 10px; }
+
+.nav-moveFromTopFade {
+  -webkit-animation: moveFromTopFade 0.7s ease both;
+  animation: moveFromTopFade 0.7s ease both; }
+
+@-webkit-keyframes moveFromTopFade {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(-100%); } }
+@keyframes moveFromTopFade {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+/*# sourceMappingURL=main.css.map */

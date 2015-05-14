@@ -1,0 +1,26 @@
+.recipe-wrapper
+    h1.recipe_title= recipe.label
+    date.recipe_date 01.01.2015
+    img.recipe_img.recipe_img-max(src=recipe.image, alt="receipt1")
+    div.row
+        div.col-xs-12.col-sm-6
+            h3.recipe_more-info Ingridients
+            each ingredient in recipe.ingredients
+                ul.recipe_ingredients
+                    li= ingredient.exactFood
+
+        div.col-xs-12.col-sm-6
+            h2 More information
+            p.recipe_info
+                span Source:
+                img.source_icon(src=recipe.sourceIcon)
+                span= recipe.source
+            p.recipe_info
+                span Calories:
+                span= recipe.calories.toFixed(2)
+            p.recipe_info
+                span Diet Labels:
+                span= recipe.dietLabels
+            p.recipe_info
+                span Preperation Time:
+                span= recipe.cookingTime

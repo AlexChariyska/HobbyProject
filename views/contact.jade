@@ -1,0 +1,15 @@
+extends ./layouts/main.jade
+block content
+    .col-md-9
+        .row
+            form.contact-wrapper
+                fieldset.col-md-6
+                    label(for="name") Name
+                    input(id="name",type="text")
+                    label(for="email") Email
+                    input(id="email",type="text")
+                    label(for="subject") Subject
+                    input(id="subject",type="text")
+                fieldset.col-md-6
+                    label(for="name") Message
+                    textarea(placeholder="What is on your mind.....")

@@ -1,0 +1,16 @@
+each recipe in recipes
+    article.recipes-wrapper.col-xs-12.col-sm-6
+        h1.recipe_title= recipe.recipe.label
+        img.recipe_img(src=recipe.recipe.image)
+        p.recipe_info
+            span Source:
+            span= recipe.recipe.source
+        p.recipe_info
+            span Calories:
+            span= recipe.recipe.calories.toFixed(2)
+        p.recipe_info
+            span Diet Labels:
+            span= recipe.recipe.dietLabels
+        a.recipe_more-info(data-id=recipe.recipe.calories) More Info
+
+
