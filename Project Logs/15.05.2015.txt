@@ -1,0 +1,8 @@
+Progress:
+-changed structure by adding route;
+- refactor coide into diffrent controllers
+
+Plan:
+-fix bug about loading the page
+-css refactoring
+- add view for adding new recipe 

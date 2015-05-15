@@ -7,15 +7,15 @@ each recipe in recipes
             span= recipe.createdAt.slice(0, 10)
         p.recipe_info
             span Ingredients:
-            span recipe.ingredients
+            span= recipe.ingredients || "No ingredients provided"
         p.recipe_info
             span Type for preparation:
-            span= recipe.timeForPrep
+            span= recipe.timeForPrep || "-"
         p.recipe_info
             span Calories:
-            span= recipe.calories
+            span= recipe.calories || "-"
         p.recipe_more-info Description:
-        p.recipe_info= recipe.description
+        p.recipe_info= recipe.description || "No description"
         .btn_container
             a.recipe_btns.recipe_remove(data-id=recipe.objectId) Remove
             a.recipe_btns.recipe_edit(data-id=recipe.objectId) Edit

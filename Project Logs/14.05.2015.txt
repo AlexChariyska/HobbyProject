@@ -1,8 +1,7 @@
 Progress:
--addded third page with yoda
+-addded third page with parse - presonal recipes
+-added edit and remove recipe
 -refactor code
-Problem:
--
 
 Plan:
 -change the view structure
