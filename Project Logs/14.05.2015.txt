@@ -1,5 +1,9 @@
-Done:
+Progress:
 -addded third page with yoda
 -refactor code
+Problem:
+-
 
+Plan:
+-change the view structure
 

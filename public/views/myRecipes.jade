@@ -1,0 +1,21 @@
+each recipe in recipes
+    article.recipes-wrapper.col-xs-12.col-sm-6
+        h1.recipe_title= recipe.label
+        img.recipe_img(src=recipe.image)
+        p.recipe_data
+            span Created at:
+            span= recipe.createdAt.slice(0, 10)
+        p.recipe_info
+            span Ingredients:
+            span recipe.ingredients
+        p.recipe_info
+            span Type for preparation:
+            span= recipe.timeForPrep
+        p.recipe_info
+            span Calories:
+            span= recipe.calories
+        p.recipe_more-info Description:
+        p.recipe_info= recipe.description
+        .btn_container
+            a.recipe_btns.recipe_remove(data-id=recipe.objectId) Remove
+            a.recipe_btns.recipe_edit(data-id=recipe.objectId) Edit

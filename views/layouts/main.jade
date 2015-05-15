@@ -10,6 +10,7 @@ html
             .container
                 .navbar-header
                     button.navbar-toggle.collapsed(data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+                        span.glyphicon.glyphicon-align-justify(aria-hidden="true")
                         span.sr-only Toggle navigation
                         span.icon-bar
                         span.icon-bar
@@ -18,49 +19,51 @@ html
                 .collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
                     ul.nav.navbar-right.navbar-nav
                         li.active
-                            a(href="/")
-                                | Receipes
-                        li#yoda
-                            a(href='yoda')
-                                | Yoda Speaks
-                        li
-                            a(href='contact')
-                                | Contact
+                            a(href="#/recipes")
+                                | Recipes
+                        li#myRecipes
+                            a(href='#/myRecipes')
+                                | My Recipes
         div.container
             .row
                 aside.col-md-3.col-sm-12.col-xs-12.aside-wrapper
-                    .aside-wrapper_img.col-xs-6
-                    ul.nav.nav-justified.nav-pills
-                        li
-                            a(href='#').social-icons__fb
-                        li
-                            a(href='#').social-icons__tw
-                        li
-                            a(href='#').social-icons__ins
-                        li
-                            a(href="#").social-icons__plus
+                    div.col-xs-6.col-sm-6.col-md-12
+                        .aside-wrapper_img
+                        ul.nav.nav-justified.nav-pills
+                            li
+                                a(href='#').social-icons__fb
+                            li
+                                a(href='#').social-icons__tw
+                            li
+                                a(href='#').social-icons__ins
+                            li
+                                a(href="#").social-icons__plus
 
-                    input#search-field.search-field(type="text", placeholder="Search...")
-                    a#search-btn.search-btn(href="#")
+                    div.col-xs-6.col-sm-6.col-md-12
+                        h1 Filters
+                        ul.nav.nav-pills.nav-stacked
+                            li
+                                a#dessert_filter(href='#',data-value='dessert') Deserts
+                            li
+                                a#pasta_filter(href='#',data-value='pasta') Pasta
+                            li
+                                a#chicken_filter(href='#',data-value='chicken') Chicken
+                            li
+                                a#exotic_filter(href='#',data-value='exotic') Exotic
 
-
-                    h1 Filters
-                    ul.nav.nav-pills.nav-stacked
-                        li
-                            a#dessert_filter(href='#',data-value='dessert') Deserts
-                        li
-                            a#pasta_filter(href='#',data-value='pasta') Pasta
-                        li
-                            a#chicken_filter(href='#',data-value='chicken') Chicken
-                        li
-                            a#exotic_filter(href='#',data-value='exotic') Exotic
-
+                        input#search-field.search-field(type="text", placeholder="Search...")
+                        a#search-btn.search-btn(href="#")
                 block content
 
     script(src='lib/jquery/dist/jquery.js')
     script(src='lib/bootstrap/dist/js/bootstrap.js')
     script(src='lib/q/q.js')
     script(src='lib/jade/jade.js')
-    script(src='js/resource.js')
-    script(src='js/helpers.js')
-    script(src='js/main.js')
+        // tools
+    script(src='js/tools/resource.js')
+    script(src='js/tools/helpers.js')
+    script(src='js/tools/router.js')
+
+    script(src='js/controllers/recipesController.js')
+    script(src='js/controllers/myRecipesController.js')
+    script(src='js/init.js')

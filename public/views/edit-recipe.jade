@@ -1,0 +1,7 @@
+h1 Edit the choosen recipe
+form#edit-form
+    input(type="text", name="label",placeholder=recipe.label).edit_value
+    input(type="number", name="calories",placeholder=recipe.calories).edit_value
+    input(type="text", name="description",placeholder=recipe.description).edit_value
+    input(type="number", name="timeForPrep",placeholder=recipe.timeForPrep).edit_value
+    a.recipe_btns#submit-edit(data-id=recipe.objectId) Change Recipe
