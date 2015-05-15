@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     Router.addRoute({
         url: "/myRecipes",
@@ -7,6 +7,7 @@ $(document).ready(function(){
 
     Router.addRoute({
         url: "/recipes",
+        default: true,
         callback: RecipesApi.init
     });
 
