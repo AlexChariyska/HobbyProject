@@ -3,18 +3,14 @@ html
     head
         title Hobby Site :)
         link(href='lib/bootstrap/dist/css/bootstrap.css', rel="stylesheet", type="text/css")
-        link(href='lib/fontawesome/css/font-awesome.css', rel="stylesheet", type="text/css")
         link(href='css/main.css', rel="stylesheet", type="text/css")
     body
-        nav.navbar.navbar-fixed-top
+        nav.navbar
             .container
                 .navbar-header
                     button.navbar-toggle.collapsed(data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
                         span.glyphicon.glyphicon-align-justify(aria-hidden="true")
                         span.sr-only Toggle navigation
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
                     a.navbar-brand(href='/') My Hobby site</a>
                 .collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
                     ul.nav.navbar-right.navbar-nav
@@ -24,6 +20,9 @@ html
                         li#myRecipes
                             a(href='#/myRecipes')
                                 | My Recipes
+                        li#addRecipe
+                            a(href='#/addRecipe')
+                                | Add new recipe
         div.container
             .row
                 aside.col-md-3.col-sm-12.col-xs-12.aside-wrapper
@@ -31,13 +30,13 @@ html
                         .aside-wrapper_img
                         ul.nav.nav-justified.nav-pills
                             li
-                                a(href='#').social-icons__fb
+                                a(href='#').social-icons.social-icons__fb
                             li
-                                a(href='#').social-icons__tw
+                                a(href='#').social-icons.social-icons__tw
                             li
-                                a(href='#').social-icons__ins
+                                a(href='#').social-icons.social-icons__ins
                             li
-                                a(href="#").social-icons__plus
+                                a(href="#").social-icons.social-icons__plus
 
                     div.col-xs-6.col-sm-6.col-md-12
                         h1 Filters
@@ -64,6 +63,7 @@ html
     script(src='js/tools/helpers.js')
     script(src='js/tools/router.js')
 
+    script(src='js/controllers/addNewRecipeController.js')
     script(src='js/controllers/recipesController.js')
     script(src='js/controllers/myRecipesController.js')
     script(src='js/init.js')

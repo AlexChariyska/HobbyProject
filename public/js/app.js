@@ -10,7 +10,10 @@ var app = function(){
         ctrl: "recipesController"
     },{
         url: "/myRecipes",
-        ctrl: "recipesController"
+        ctrl: "myRecipesController"
+    },{
+        url: "/addRecipe",
+        ctrl: "addNewRecipeController"
     }];
 
     var init = function(){

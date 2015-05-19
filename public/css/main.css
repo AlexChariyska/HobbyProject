@@ -7,6 +7,9 @@ body {
   font-family: myFirstFont;
   font-size: 16px; }
 
+.navbar {
+  will-change: transform; }
+
 a:hover {
   text-decoration: none; }
 
@@ -53,23 +56,19 @@ a:hover {
     display: inline-block;
     vertical-align: middle;
     background-size: 80%; }
+  .aside-wrapper .social-icons {
+    background: url(../img/spritesheet.png) no-repeat;
+    display: block;
+    width: 48px;
+    height: 48px; }
   .aside-wrapper .social-icons__fb {
-    background: url("../img/facebook.png") no-repeat;
-    width: 48px;
-    height: 48px;
-    display: block; }
+    background-position: -54px -2px; }
   .aside-wrapper .social-icons__tw {
-    background: url("../img/footer_social_twitter.png") no-repeat;
-    width: 48px;
-    height: 48px; }
+    background-position: -2px -54px; }
   .aside-wrapper .social-icons__ins {
-    background: url("../img/instagram.png") no-repeat;
-    width: 48px;
-    height: 48px; }
+    background-position: -54px -54px; }
   .aside-wrapper .social-icons__plus {
-    background: url("../img/bloglovin.png") no-repeat;
-    width: 48px;
-    height: 48px; }
+    background-position: -2px -2px; }
 
 .recipe_gallery {
   list-style: none; }

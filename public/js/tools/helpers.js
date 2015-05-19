@@ -5,14 +5,18 @@ var helpers = function () {
     function navigationEffect() {
         if (window.scrollY >= 70) {
             nav.style.background = '#F6F6EF';
+            nav.classList.add('navbar-fixed-top');
             nav.classList.add('nav-moveFromTopFade');
+
         } else {
             nav.classList.remove('nav-moveFromTopFade');
             nav.style.background = 'transparent';
+            nav.classList.remove('navbar-fixed-top');
         }
 
         requestAnimationFrame(navigationEffect);
     }
+
 
     $(window).scroll(function () {
         $('#bs-example-navbar-collapse-1').removeClass('in');

@@ -75,6 +75,11 @@ var RecipesApi = (function () {
             filterRequest(value);
         });
 
+        $(".nav-stacked").click(function (event) {
+            var value = event.target.getAttribute('data-value');
+            filterRequest(value);
+        });
+
         return list();
 
     };
