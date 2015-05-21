@@ -5,12 +5,15 @@ function Resource(url, headers) {
     this.header = headers;
 }
 
+
+
+
+
 Resource.prototype.query = function () {
     return Q($.ajax({
         type: "GET",
         "url": this.url,
         "headers":this.header
-  /*      dataType: "json"*/
     }));
 };
 

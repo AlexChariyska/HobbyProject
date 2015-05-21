@@ -80,6 +80,32 @@ var RecipesApi = (function () {
             filterRequest(value);
         });
 
+        $("#login-btn").click(function (event) {
+            var name = $('#login-name').val();
+            var password = $('#login-password').val();
+            var logIn = new Resource("https://api.parse.com/1/login?username=" + name + "&password=" + password,
+                {
+                    "X-Parse-Application-Id": "7kj30heq0KxoNNjG1wyWB3kjsrlS8zu7WJs1ayLo",
+                    "X-Parse-REST-API-Key": "Wxg26PjvySMaEAymeI3CVFjx6FZuocBo4TtdPGDz"
+                });
+            logIn.query().then(function (result) {
+                sessionStorage.clear();
+                sessionStorage.setItem("token", result.sessionToken);
+                var name = $('#login-name').val('');
+                var password = $('#login-password').val('');
+                location.reload();
+            });
+        });
+
+
+        if(sessionStorage.getItem('token')){
+            $('.navbar-right').append("<li><a id='log-out' href=''>Log out</a></li>");
+            $('#log-out').click(function(){
+                sessionStorage.clear();
+                location.reload();
+            })
+        }
+
         return list();
 
     };

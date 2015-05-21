@@ -52,6 +52,13 @@ html
 
                         input#search-field.search-field(type="text", placeholder="Search...")
                         a#search-btn.search-btn(href="#")
+
+                    div.col-xs-12
+                        h1 Log in
+                        form
+                            input#login-name(placeholder='Name...').login-input
+                            input#login-password(type="password", placeholder='Password...').login-input
+                            a.recipe_btns#login-btn(type='submit') Submit
                 block content
 
     script(src='lib/jquery/dist/jquery.js')

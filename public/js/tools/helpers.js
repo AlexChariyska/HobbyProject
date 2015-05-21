@@ -3,7 +3,7 @@ var helpers = function () {
     requestAnimationFrame(navigationEffect);
 
     function navigationEffect() {
-        if (window.scrollY >= 70) {
+        if (window.scrollY >= 150) {
             nav.style.background = '#F6F6EF';
             nav.classList.add('navbar-fixed-top');
             nav.classList.add('nav-moveFromTopFade');

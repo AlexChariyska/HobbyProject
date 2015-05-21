@@ -2,21 +2,32 @@ var MyRecipes = (function () {
 
     var wrapper = $("#recipesList");
 
-    var myRecipes = new Resource("https://api.parse.com/1/classes/Recipes",
-        {
-            "X-Parse-Application-Id": "7kj30heq0KxoNNjG1wyWB3kjsrlS8zu7WJs1ayLo",
-            "X-Parse-REST-API-Key": "Wxg26PjvySMaEAymeI3CVFjx6FZuocBo4TtdPGDz"
-        });
+    function updateHeader(){
+        var currentUser = sessionStorage.getItem("token");
+
+        return myRecipes = new Resource("https://api.parse.com/1/classes/Recipes",
+            {
+                "X-Parse-Application-Id": "7kj30heq0KxoNNjG1wyWB3kjsrlS8zu7WJs1ayLo",
+                "X-Parse-REST-API-Key": "Wxg26PjvySMaEAymeI3CVFjx6FZuocBo4TtdPGDz",
+                "X-Parse-Session-Token": currentUser
+            });
+    }
+
+    myRecipes = updateHeader();
 
 
     var displayMyRecipes = function(){
         wrapper.empty();
+        myRecipes = updateHeader();
         myRecipes.query().then(function (result) {
             return helpers.displayWithJade(wrapper, "views/myRecipes.jade", {
                 recipes: result.results
             });
 
+        },function(){
+            $("#recipesList").append("You are not logged in or authorized :) ")
         }).then(function () {
+
             removeRecipe();
             editRecipe();
         });
