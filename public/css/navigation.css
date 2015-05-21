@@ -1,0 +1,62 @@
+.navbar {
+  will-change: transform; }
+
+.nav-justified > li {
+  float: none;
+  display: inline-block; }
+
+.aside-wrapper {
+  overflow: hidden;
+  margin: 0 auto; }
+  .aside-wrapper .aside-wrapper_img {
+    background: url("http://localmilkblog.com/wp-content/uploads/2013/07/sidebar_logo.png") no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    width: 100%;
+    height: 250px; }
+  .aside-wrapper .search-field {
+    border: none;
+    outline: none;
+    font-size: 20px; }
+  .aside-wrapper .search-field:active {
+    outline: none; }
+  .aside-wrapper .search-btn {
+    background: url("../img/search.png") no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 80%; }
+  .aside-wrapper .social-icons {
+    background: url(../img/spritesheet.png) no-repeat;
+    display: block;
+    width: 48px;
+    height: 48px;
+    z-index: 10; }
+  .aside-wrapper .social-icons__fb {
+    background-position: -54px -2px; }
+  .aside-wrapper .social-icons__tw {
+    background-position: -2px -54px; }
+  .aside-wrapper .social-icons__ins {
+    background-position: -54px -54px; }
+  .aside-wrapper .social-icons__plus {
+    background-position: -2px -2px; }
+
+.nav-moveFromTopFade {
+  -webkit-animation: moveFromTopFade 0.7s ease both;
+  animation: moveFromTopFade 0.7s ease both; }
+
+.navbar-collapse {
+  text-align: center; }
+
+@-webkit-keyframes moveFromTopFade {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(-100%); } }
+@keyframes moveFromTopFade {
+  from {
+    opacity: 0.3;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+/*# sourceMappingURL=navigation.css.map */

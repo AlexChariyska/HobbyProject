@@ -1,8 +1,0 @@
-Progress:
--addded third page with parse - presonal recipes
--added edit and remove recipe
--refactor code
-
-Plan:
--change the view structure
-

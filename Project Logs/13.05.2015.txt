@@ -1,7 +1,0 @@
-Done:
--addded themplate use and refactor code
--Selection of spesific recipe
-
-ToDo
--Third page = difrrent api
--fully responsive design

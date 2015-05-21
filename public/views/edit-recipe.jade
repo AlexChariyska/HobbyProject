@@ -1,9 +1,10 @@
-h1 Edit the choosen recipe
-form#edit-form
-    input(type="text", name="label",placeholder=recipe.label || "Recipe title", value=recipe.label).edit_value
-    input(type="text", name="calories",placeholder=recipe.calories || "Calories",value=recipe.calories).edit_value
-    input(type="text", name="image",placeholder=recipe.image || "Image src",value=recipe.image).edit_value
-    input(type="text", name="description",placeholder=recipe.description || "Recipe description",value=recipe.description).edit_value
-    input(type="text", name="timeForPrep",placeholder=recipe.timeForPrep || "Recipe Time for preparation",value=recipe.timeForPrep).edit_value
-    input(type="text", name="ingredients",placeholder=recipe.ingredients || "Ingredients",value=recipe.ingredients).edit_value
-    a.recipe_btns#submit-edit(data-id=recipe.objectId) Change Recipe
+article.pt-page-moveFromRight
+    h1 Edit the choosen recipe
+    form#edit-form
+        input(type="text", name="label",placeholder=recipe.label || "Recipe title", value=recipe.label).edit_value
+        input(type="text", name="calories",placeholder=recipe.calories || "Calories",value=recipe.calories).edit_value
+        input(type="text", name="image",placeholder=recipe.image || "Image src",value=recipe.image).edit_value
+        input(type="text", name="description",placeholder=recipe.description || "Recipe description",value=recipe.description).edit_value
+        input(type="text", name="timeForPrep",placeholder=recipe.timeForPrep || "Recipe Time for preparation",value=recipe.timeForPrep).edit_value
+        input(type="text", name="ingredients",placeholder=recipe.ingredients || "Ingredients",value=recipe.ingredients).edit_value
+        a.recipe_btns#submit-edit(data-id=recipe.objectId) Change Recipe

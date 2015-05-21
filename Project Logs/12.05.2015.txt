@@ -1,8 +1,0 @@
-Hobby Project
-Did
--added resource
--refactore code
-- filter requests
-ToDos
-Individual page with jade themplate;
-accept image format - how?
